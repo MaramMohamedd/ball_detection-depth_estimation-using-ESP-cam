@@ -5,7 +5,7 @@ import time
 # ============================================
 # CONFIGURATION - CHANGE THESE!
 # ============================================
-STREAM_URL = "http://192.168.1.16:81/stream"  # Your ESP32-CAM IP
+STREAM_URL = "http://10.65.189.32:81/stream"  # Your ESP32-CAM IP
 
 # Your ball's real diameter (MEASURE THIS!)
 REAL_BALL_DIAMETER_CM = 7.0  # <-- CHANGE to your ball's actual size
