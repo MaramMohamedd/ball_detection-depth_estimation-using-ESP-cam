@@ -1,3 +1,6 @@
+#this code is modified to handle the resolution , skipping some frames to prevent overwhelming the buffer 
+#but it will not be used it jusst for make sure about the camera parameters that will not make the python overwhelms the buffer
+
 import cv2
 import numpy as np
 import time
