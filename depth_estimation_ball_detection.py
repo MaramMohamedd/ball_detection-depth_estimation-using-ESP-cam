@@ -3,7 +3,7 @@ import numpy as np
 import time
 
 # ============================================
-# CONFIGURATION - CHANGE THESE!
+# CONFIGURATION - CHANGE THESE
 # ============================================
 STREAM_URL = "http://10.65.189.32:81/stream"  # Your ESP32-CAM IP
 
