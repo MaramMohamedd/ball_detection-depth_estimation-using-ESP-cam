@@ -46,7 +46,7 @@ pip install opencv-python numpy
 ### 3. Clone Repository
 
 ```bash
-git clone https://github.com/MaramMohamedd/detection-depth-estimation-using-ESP-cam.git
+git clone https://github.com/MaramMohamedd/ball_detection-depth-estimation-using-ESP-cam.git
 cd esp32-ball-detection
 ```
 
@@ -161,7 +161,7 @@ From my testing experience:
    cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
    ```
 
-## 🔬 How It Works
+##  How It Works 
 
 ### Distance Estimation Formula
 
@@ -208,15 +208,12 @@ Distance: 35.7 cm
 - [ ] Create GUI interface
 - [ ] Support for different colored objects
 
-## 🤝 Contributing
+##  Contributing
 
 Feel free to fork this repository and submit pull requests. For major changes, please open an issue first to discuss what you'd like to change.
 
-## 📝 License
 
-MIT License - feel free to use this project for personal or commercial purposes.
-
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - ESP32-CAM community
 - OpenCV developers
