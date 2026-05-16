@@ -3,6 +3,9 @@
 
 Real-time ball detection and distance estimation using ESP32-CAM and computer vision. The system detects an indigo blue ball and calculates its distance from the camera using a calibrated focal length formula.
 
+<img width="1480" height="1002" alt="Screenshot 2026-05-02 071242" src="https://github.com/user-attachments/assets/f4c4b48f-00f6-4a67-a5c5-54b0c0e0110b" />
+
+
 ## 🎯 Features
 
 - **Real-time ball detection** using HSV color filtering
@@ -43,7 +46,7 @@ pip install opencv-python numpy
 ### 3. Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/esp32-ball-detection.git
+git clone https://github.com/MaramMohamedd/detection-depth-estimation-using-ESP-cam.git
 cd esp32-ball-detection
 ```
 
@@ -54,7 +57,7 @@ cd esp32-ball-detection
 Find the optimal HSV range for your ball:
 
 ```bash
-python hsv_calibration.py
+python calibrate_ball_color.py
 ```
 
 - Click on the ball in the video window
@@ -69,7 +72,7 @@ Calibrate your camera's focal length:
 python focal_calibration.py
 ```
 
-1. Place the ball exactly **20 cm** from the camera
+1. Place the ball exactly **20 cm** from the camera or change it as you like but don't forget to set this distance in your code
 2. Press `SPACE` when ball is detected
 3. Copy the calculated focal length value to the main script
 
@@ -95,20 +98,20 @@ The **ESP32-CAM-MB** is a shield/programmer board that makes everything much sim
    - Works for most cases
    - May have issues if laptop USB port is weak 
    
-2. **USB Wall Charger** (recommended for reliability):
+2. **USB Wall Charger** (recommended for reliability) but i didn't use it:
    - 5V, 1A minimum
    - More stable for long-running projects
 
 ## 📁 Project Structure
 
 ```
-ball-detection-depth-estimation-using-ESP-cam/
+esp32-ball-detection/
 │
 ├── depth_estimation_ball_detection.py   # Main application
 ├── celibrate_ball_color.py              # HSV value finder
 ├── focal_calibration.py                 # Focal length calibrator
 ├── ball_detection_final.py              # src code for detection only                    
-├── requirements.txt                     
+├── modified_detection_only_optimized.py  # this is just the pre final version of the detection only file , read the first comment in it for more info                
 └── README.md                            # This file
 ```
 
@@ -133,10 +136,10 @@ Edit the following variables in the main script:
 
 ```python
 # Camera settings
-STREAM_URL = "http://192.168.1.16:81/stream"  # Your ESP32-CAM IP
+STREAM_URL = "http://192.168.1.16:81/stream"  # Your ESP32-CAM IP you will know it from the arduino code 
 
 # Ball properties
-REAL_BALL_DIAMETER_CM = 7.0    # Your ball's actual diameter
+REAL_BALL_DIAMETER_CM = 7.0    # Your ball's actual diameter meseared manually
 FOCAL_LENGTH = 265.33           # Your calibrated focal length
 
 # HSV range (from calibration)
